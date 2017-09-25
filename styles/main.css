@@ -81,6 +81,7 @@ html {
          color: rgb(233,50,117);
          font-size: 5rem;
      }
+<<<<<<< HEAD
      /* Medium and small screens (640px) */
       @media (min-width: 640px) {
         html { font-size: 112%; }
@@ -111,3 +112,5 @@ html {
                 .column.fourth { width: 25%; }
                 .column.flow-opposite { float: right; }
             }
+=======
+>>>>>>> checkpoint-3
