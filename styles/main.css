@@ -12,7 +12,7 @@ html {
  body {
      font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
      color: white;             /* sets the text color to white */
-     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the windw */
+     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
  }
 
  body.landing {
