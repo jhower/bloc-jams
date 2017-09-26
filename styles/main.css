@@ -12,7 +12,7 @@ html {
  body {
      font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
      color: white;             /* sets the text color to white */
-     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
+     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the windw */
  }
 
  body.landing {
@@ -82,6 +82,9 @@ html {
          font-size: 5rem;
      }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> checkpoint-3
      /* Medium and small screens (640px) */
       @media (min-width: 640px) {
         html { font-size: 112%; }
@@ -112,5 +115,8 @@ html {
                 .column.fourth { width: 25%; }
                 .column.flow-opposite { float: right; }
             }
+<<<<<<< HEAD
+=======
+>>>>>>> checkpoint-3
 =======
 >>>>>>> checkpoint-3
