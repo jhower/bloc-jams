@@ -81,13 +81,6 @@ html {
          color: rgb(233,50,117);
          font-size: 5rem;
      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> checkpoint-3
-=======
->>>>>>> checkpoint-3
      /* Medium and small screens (640px) */
       @media (min-width: 640px) {
         html { font-size: 112%; }
@@ -118,11 +111,10 @@ html {
                 .column.fourth { width: 25%; }
                 .column.flow-opposite { float: right; }
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> checkpoint-3
-=======
->>>>>>> checkpoint-3
-=======
->>>>>>> checkpoint-3
+            .clearfix::after {
+               content: ".";
+               visibility: hidden;
+               display: block;
+               height: 0;
+               clear: both;
+            }
