@@ -47,24 +47,31 @@ html {
      height: 100%;
      padding-left: 1rem;
      padding-right: 1rem;
-     /* #3 */
+
      vertical-align: middle;
      color: white;
      font-size: 0.625rem;
      letter-spacing: 0.05rem;
      font-weight: 700;
      text-transform: uppercase;
-     /* #4 */
      text-decoration: none;
      cursor: pointer;
  }
 
-   /* #5 */
+
  .links-container .navbar-link:hover {
      color: rgb(233,50,117);
  }
-
-
+.links-container .navbar-link:active {
+  background-color: white;
+}
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+  .container.narrow {
+       max-width: 56rem;
+   }
   .hero-content {
        position: relative; /* positioning will be explained in a resource */
        min-height: 600px;  /* hero content element must be _at least_ 600 pixels */
@@ -117,6 +124,7 @@ html {
          color: rgb(233,50,117);
          font-size: 5rem;
      }
+
      /* Medium and small screens (640px) */
       @media (min-width: 640px) {
         html { font-size: 112%; }
@@ -124,17 +132,13 @@ html {
 
       /* Large screens (1024px) */
       @media (min-width: 1024px) {
-        html { font-size: 120%; }
-      }
-      .container {
-          margin: 0 auto;
-          max-width: 64rem;
+        html {font-size: 120%;}
       }
 
-      /* Medium screens (640px) */
-      @media (min-width: 640px) {
-          html { font-size: 112%; }
-      }
+        /* Medium screens (640px) */
+ @media (min-width: 640px) {
+     html { font-size: 112%; }
+ }
       .column {
                float: left;
                padding-left: 1rem;
