@@ -67,8 +67,11 @@ body.album {
             margin-top: 0;
         }
     }
+<<<<<<< HEAD
 
     /* #3 */
+=======
+>>>>>>> checkpoint-6
     @media (max-width: 1024px) and (min-width: 320px) {
        .album-view-song-list {
             position: relative;
@@ -77,6 +80,7 @@ body.album {
             margin: auto;
         }
     }
+<<<<<<< HEAD
  .container {
       margin: 0 auto;
       max-width: 64rem;
@@ -87,3 +91,5 @@ body.album {
   }
 
   /* Medium screens (640px) */
+=======
+>>>>>>> checkpoint-6
