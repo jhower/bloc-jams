@@ -54,7 +54,10 @@ html {
      letter-spacing: 0.05rem;
      font-weight: 700;
      text-transform: uppercase;
+<<<<<<< HEAD
 
+=======
+>>>>>>> checkpoint-5
      text-decoration: none;
      cursor: pointer;
  }
@@ -66,6 +69,13 @@ html {
 .links-container .navbar-link:active {
   background-color: white;
 }
+<<<<<<< HEAD
+=======
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+>>>>>>> checkpoint-5
 
   .hero-content {
        position: relative; /* positioning will be explained in a resource */
@@ -129,10 +139,14 @@ html {
       @media (min-width: 1024px) {
         html {font-size: 120%;}
       }
+<<<<<<< HEAD
       .container {
           margin: 0 auto;
           max-width: 64rem;
         }
+=======
+
+>>>>>>> checkpoint-5
         /* Medium screens (640px) */
  @media (min-width: 640px) {
      html { font-size: 112%; }
