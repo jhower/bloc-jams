@@ -99,7 +99,7 @@ window.onload = function() {
     });
   }
 
-
+  
   var albums = [albumPicasso, albumMarconi, albumKiss];
   var index = 1;
   albumImage.addEventListener("click", function(event) {
