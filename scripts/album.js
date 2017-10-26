@@ -63,11 +63,15 @@ var albumReleaseInfo = document.getElementsByClassName('album-view-release-info'
 var albumImage = document.getElementsByClassName('album-cover-art')[0];
 
 var findParentByClassName = function(element, targetClass) {
+console.log("element: ", element);
+  console.log("target: ", targetClass);
   if (element) {
     var currentParent = element.parentElement;
+    console.log("currentParent", currentParent);
     while (currentParent.className !== targetClass && currentParent.className !== null) {
       currentParent = currentParent.parentElement;
     }
+
     return currentParent;
   }
 };
