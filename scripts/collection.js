@@ -21,7 +21,7 @@ var collectionItemTemplate =
        collectionContainer.innerHTML = '';
 
        // #3
-       for (var i = 0; i < 8; i++) {
+       for (var i = 0; i < 2; i++) {
            collectionContainer.innerHTML += collectionItemTemplate;
        }
    }
