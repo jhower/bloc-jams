@@ -43,6 +43,7 @@ var albumKiss = {
   ]
 };
 
+
 var createSongRow = function(songNumber, songName, songLength) {
   '<tr class="album-view-song-item">'
   + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
