@@ -51,7 +51,7 @@ var createSongRow = function(songNumber, songName, songLength) {
   + '</tr>'
 ;
   var $row = $(template);
-
+};
   var clickHandler = function() {
     var songNumber = $(this).attr('data-song-number');
 
@@ -83,12 +83,12 @@ var createSongRow = function(songNumber, songName, songLength) {
     var songNumber = songNumberCell.attr('data-song-number');
     if (songNumber !== currentlyPlayingSong) {
       songNumberCell.html(songNumber);
-    }
-  };
   $row.find('.song-item-number').click(clickHandler);
   $row.hover(onHover, offHover);
   return $row;
   };
+
+var $albumImage = document.getElementsByClassName("album-cover-art")[0];
 
 var setCurrentAlbum = function(album) {
   var $albumTitle = $('.album-view-title');
@@ -120,12 +120,12 @@ $(document).ready(function() {
   setCurrentAlbum(albumPicasso);
 });
 
-  var albums = [albumPicasso, albumMarconi, albumKiss];
-  var index = 1;
-  $albumImage.addEventListener("click", function(event) {
-    setCurrentAlbum(albums[index]);
-    index++;
-    if (index == albums.length) {
-      index = 0;
-    }
-  });
+var albums = [albumPicasso, albumMarconi, albumKiss];
+var index = 1;
+$albumImage.addEventListener("click", function(event) {
+  setCurrentAlbum(albums[index]);
+  index++;
+  if (index == albums.length) {
+    index = 0;
+  }})
+};
