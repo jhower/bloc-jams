@@ -44,12 +44,14 @@ var albumKiss = {
 };
 
 var createSongRow = function(songNumber, songName, songLength) {
+  var template =
   '<tr class="album-view-song-item">'
   + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
   + '  <td class="song-item-title">' + songName + '</td>'
   + '  <td class="song-item-duration">' + songLength + '</td>'
   + '</tr>'
 ;
+
 var $row = $(template);
 var onHover = function(event) {
   var songNumberCell = $(this).find('.song-item-number');
@@ -106,6 +108,7 @@ var setCurrentAlbum = function(album) {
   for (var i = 0; i < album.songs.length; i++) {
     var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
       $albumSongList.append($newRow);
+      // console.log($newRow);
   }
 };
 
