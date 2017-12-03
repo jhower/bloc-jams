@@ -47,11 +47,8 @@ var $row = $(template);
     setSong(songNumber);
     currentSoundFile.play();
     $(this).html(pauseButtonTemplate);
-<<<<<<< HEAD
-    setSong = songNumber;
+    setSong(songNumber);
     console.log(setSong);
-=======
->>>>>>> checkpoint-20
     currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
     updatePlayerBarSong();
   } else if (setSong === songNumber) {
