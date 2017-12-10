@@ -129,6 +129,7 @@ var currentVolume = 80;
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
+var $togglePlayFromPlayerBar = $('.main-controls .play-pause')
 
 
 
@@ -182,8 +183,20 @@ var previousSong = function() {
   $lastSongNumberCell.html(lastSongNumber);
 };
 
+var togglePlayFromPlayerBar = function() {
+  currentSoundFile.play();
+  currentSoundFile.pause();
+  updatePlayerBarSong();
+
+  $('.main-controls .play-pause').html(playerBarPauseButton);
+
+
+  };
+
+
 $(document).ready(function() {
   setCurrentAlbum(albumPicasso);
   $previousButton.click(previousSong);
   $nextButton.click(nextSong);
+  $playerBarPlayButton.click(togglePlayFromPlayerBar);
 });
