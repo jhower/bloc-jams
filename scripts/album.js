@@ -129,7 +129,8 @@ var currentVolume = 80;
 
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
-var $togglePlayFromPlayerBar = $('.main-controls .play-pause')
+//var $togglePlayFromPlayerBar = $('.main-controls .play-pause')
+var $playerBarPlayButton = $('.main-controls .play-pause')
 
 
 
@@ -184,15 +185,19 @@ var previousSong = function() {
 };
 
 var togglePlayFromPlayerBar = function() {
-  currentSoundFile.play();
-  currentSoundFile.pause();
-  updatePlayerBarSong();
-
-  $('.main-controls .play-pause').html(playerBarPauseButton);
-
-
-  };
-
+  if (currentSoundFile.isPaused()) {
+    $(this).html(pauseButtonTemplate);
+    $('.main-controls .play-pause').html(playerBarPauseButton);
+      currentSoundFile.play();
+  } else {
+    $(this).html(playButtonTemplate);
+    $('.main-controls .play-pause').html(playerBarPlayButton);
+      currentSoundFile.pause();
+  }
+  if (currentSongIndex < 0) {
+    currentSongIndex = currentAlbum.songs.length;
+  }
+};
 
 $(document).ready(function() {
   setCurrentAlbum(albumPicasso);
