@@ -194,7 +194,7 @@ var togglePlayFromPlayerBar = function() {
     $('.main-controls .play-pause').html(playerBarPlayButton);
       currentSoundFile.pause();
   }
-  if (currentSongIndex < 0) {
+  if (currentSongIndex ) {
     currentSongIndex = currentAlbum.songs.length;
   }
 };
