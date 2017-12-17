@@ -185,6 +185,12 @@ var previousSong = function() {
 };
 
 var togglePlayFromPlayerBar = function() {
+<<<<<<< HEAD
+=======
+  var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
+    // Note that we're _decrementing_ the index here
+  currentSongIndex;
+>>>>>>> checkpoint-21
   if (currentSoundFile.isPaused()) {
     $(this).html(pauseButtonTemplate);
     $('.main-controls .play-pause').html(playerBarPauseButton);
@@ -194,7 +200,11 @@ var togglePlayFromPlayerBar = function() {
     $('.main-controls .play-pause').html(playerBarPlayButton);
       currentSoundFile.pause();
   }
+<<<<<<< HEAD
   if (currentSongIndex ) {
+=======
+  if (currentSongIndex < 0) {
+>>>>>>> checkpoint-21
     currentSongIndex = currentAlbum.songs.length;
   }
 };
