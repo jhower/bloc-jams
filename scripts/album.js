@@ -116,13 +116,11 @@ var setCurrentAlbum = function(album) {
 
 var updateSeekBarWhileSongPlays = function() {
   if (currentSoundFile) {
-// #10
     currentSoundFile.bind('timeupdate', function(event) {
-// #11
-      var seekBarFillRatio = this.getTime() / this.getDuration();
-      var $seekBar = $('.seek-control .seek-bar');
-
+    var seekBarFillRatio = this.getTime() / this.getDuration();
+    var $seekBar = $('.seek-control .seek-bar');
       updateSeekPercentage($seekBar, seekBarFillRatio);
+      setCurrentTimeInPlayerBar(currentSoundFile.getTime());
     });
   }
 };
@@ -189,6 +187,7 @@ var updatePlayerBarSong = function() {
   $('.currently-playing .artist-name').text(currentAlbum.artist);
   $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
   $('.main-controls .play-pause').html(playerBarPauseButton);
+  setTotalTimeInPlayerBar(currentSongFromAlbum.duration);
 };
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
@@ -206,8 +205,7 @@ var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
 //var $togglePlayFromPlayerBar = $('.main-controls .play-pause')
 var $playerBarPlayButton = $('.main-controls .play-pause')
-
-
+var $playerBarPlayButton = $('.main-controls .play-pause');
 
 var nextSong = function() {
   var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
@@ -276,6 +274,30 @@ var togglePlayFromPlayerBar = function() {
     currentSongIndex = currentAlbum.songs.length;
   }
 };
+
+
+var setCurrentTimeInPlayerBar = function(currentTime) {
+    $('.current-time').text(filterTimeCode(currentTime));
+};
+
+var setTotalTimeInPlayerBar = function(totalTime) {
+    $('.total-time').text(filterTimeCode(totalTime));
+};
+
+var filterTimeCode = function(timeInSeconds) {
+  var wholeSeconds = Math.floor(parseFloat(timeInSeconds));
+  var wholeMinutes = Math.floor(wholeSeconds / 60);
+  var displaySeconds = wholeSeconds % 60;
+  var finalTime = wholeMinutes + ':';
+
+  if (displaySeconds < 10) {
+    finalTime += '0' + displaySeconds;
+  } else {
+    finalTime += displaySeconds;
+  }
+  return finalTime;
+};
+
 
 $(document).ready(function() {
   setCurrentAlbum(albumPicasso);
